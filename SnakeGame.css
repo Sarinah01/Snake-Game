@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("SnakeBoard.jpg") no-repeat;
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#card {
+    background: linear-gradient(rgb(61, 131, 0), rgb(0, 98, 67), rgb(0, 74, 134));
+    height: 85vmin;
+    width: 95vmin;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+    justify-content: center;
+    opacity: 0.7;
+    border: 0.5px solid rgb(95, 159, 0);
+    box-shadow: 15px 15px 15px rgb(57, 99, 57);
+    backdrop-filter: blur(25px);
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width:343px) {
+    #card {
+        margin-left: -78px;
+        width: 65vw;
+        height: 85vh;
+    }
+}
+
+@media (min-width: 343px) and (max-width: 768px) {
+    #card {
+        margin-left: -27vw;
+        width: 60vw;
+        height: 85vh;
+    }
+}
+
+
+@media (min-width:768px) {
+    #card {
+        margin-left: -38vw;
+        height: 90vh;
+    }
+}
+
+.head{
+    background: linear-gradient( rgb(255, 255, 0), rgb(117, 83, 20));
+    border: 0.5px solid rgb(117, 70, 0);
+    transform: scale(1.02);
+    border-radius: 3px;
+}
+.snake {
+    background: linear-gradient( rgb(188, 188, 0), rgb(83, 54, 0));
+    border: 0.25px solid rgb(117, 70, 0);
+    border-radius: 3px;
+  }
+  
+  .food {
+    background: linear-gradient(rgb(129, 15, 15), rgb(0, 0, 0));
+    border: 0.5px solid rgb(114, 0, 0);
+    border-radius: 3px;
+  }
+  
+  #hiscoreBox, #scoreBox {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "New Tegomin", serif;
+  }
+
+  @media (min-width : 343px) {
+    #hiscoreBox{
+     top: 28%;   
+     left: 70%;
+    }
+    #scoreBox{
+        top: 20%;   
+        left: 70%;
+       }
+  }
+  @media(max-width:343px){
+    #hiscoreBox{
+        top: 13%;   
+        left: 70%;
+       }
+       #scoreBox{
+           top: 25%;   
+           left: 70%;
+          }
+  }
